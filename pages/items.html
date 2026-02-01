@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Items</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="topbar">
+  <h2>Sales App</h2>
+
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="items.html">Items</a>
+    <a href="sales.html">Sales</a>
+    <a href="login.html">Logout</a>
+  </nav>
+</header>
+
+
+  <!-- Header -->
+  <header class="header">
+    <h2>Sales & Inventory Management System</h2>
+    <button class="logout-btn">Logout</button>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="container">
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li class="active"><a href="items.html">Items</a></li>
+        <li><a href="sales.html">Add Sale</a></li>
+        <li><a href="sales-history.html">Sales History</a></li>
+        <li><a href="customers.html">Customers</a></li>
+      <li><a href="admin-targets.html">Employee Targets</a></li>
+      <li><a href="employee-profile.html">My Profile</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>Inventory</h1>
+
+      <!-- Add / Edit Item Form -->
+      <section class="card">
+        <h3>Add / Edit Item</h3>
+
+        <form id="itemForm">
+          <div class="form-group">
+            <label for="itemName">Item Name</label>
+            <input type="text" id="itemName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="basePrice">Base Price (Minimum Selling Price)</label>
+            <input type="number" id="basePrice" required>
+          </div>
+
+          <div class="form-group">
+            <label for="stock">Stock</label>
+            <input type="number" id="stock" required>
+          </div>
+
+          <button id="addItemBtn" type="button">Add Item</button>
+        </form>
+      </section>
+
+      <!-- Items Table -->
+      <section class="card">
+        <h3>Items List</h3>
+
+        <table width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th align="left">Item Name</th>
+              <th align="left">Price</th>
+              <th align="left">Stock</th>
+              <th align="left">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="itemsTableBody">
+          
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+  </div>
+<script src="../js/items.js"></script>
+
+</body>
+</html>
