@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h2>Sales & Inventory Management System</h2>
+    <button class="logout-btn">Logout</button>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="container">
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="items.html">Items</a></li>
+        <li><a href="sales.html">Add Sale</a></li>
+        <li><a href="sales-history.html">Sales History</a></li>
+        <li class="active"><a href="customers.html">Customers</a></li>
+      <li><a href="admin-targets.html">Employee Targets</a></li>
+      <li><a href="employee-profile.html">My Profile</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>All Customers</h1>
+
+      <!-- Search/Filter Section -->
+      <section class="card">
+        <h3>Search</h3>
+        <div style="display: flex; gap: 15px;">
+          <input type="text" id="searchCustomer" placeholder="Search by name or phone" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+          <button id="clearSearchBtn" type="button">Clear</button>
+        </div>
+      </section>
+
+      <!-- Customers List -->
+      <section class="card">
+        <h3>Customer Details</h3>
+        <div id="customersContainer" style="margin-top: 15px;">
+          <p style="text-align: center; color: #6b7280;">No customers found</p>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+<script src="../js/customers.js"></script>
+
+</body>
+</html>
