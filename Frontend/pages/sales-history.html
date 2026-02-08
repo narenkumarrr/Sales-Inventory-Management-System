@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales History</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h2>Sales & Inventory Management System</h2>
+    <button class="logout-btn">Logout</button>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="container">
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="items.html">Items</a></li>
+        <li><a href="sales.html">Add Sale</a></li>
+        <li class="active"><a href="sales-history.html">Sales History</a></li>
+        <li><a href="customers.html">Customers</a></li>
+      <li><a href="admin-targets.html">Employee Targets</a></li>
+      <li><a href="employee-profile.html">My Profile</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>Sales History</h1>
+
+      <!-- Filters -->
+      <section class="card">
+        <h3>Filters</h3>
+        <div style="display: flex; gap: 15px; margin-top: 10px;">
+          <div class="form-group" style="margin: 0;">
+            <label for="filterDate">Date:</label>
+            <input type="date" id="filterDate" style="width: 200px;">
+          </div>
+          <button id="clearFilterBtn" type="button" style="height: 38px; margin-top: 22px;">Clear Filters</button>
+        </div>
+      </section>
+
+      <!-- Sales Summary -->
+      <section class="card">
+        <h3>Summary</h3>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 10px;">
+          <div>
+            <p style="color: #6b7280; font-size: 14px;">Total Sales</p>
+            <p id="totalSales" style="font-size: 24px; font-weight: bold;">0</p>
+          </div>
+          <div>
+            <p style="color: #6b7280; font-size: 14px;">Total Revenue</p>
+            <p id="totalRevenue" style="font-size: 24px; font-weight: bold; color: #2563eb;">₹0</p>
+          </div>
+          <div>
+            <p style="color: #6b7280; font-size: 14px;">Total Profit</p>
+            <p id="totalProfit" style="font-size: 24px; font-weight: bold; color: green;">₹0</p>
+          </div>
+          <div>
+            <p style="color: #6b7280; font-size: 14px;">Avg Profit/Sale</p>
+            <p id="avgProfit" style="font-size: 24px; font-weight: bold; color: green;">₹0</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sales Table -->
+      <section class="card">
+        <h3>All Sales</h3>
+        <table width="100%" cellspacing="0" style="margin-top: 15px;">
+          <thead>
+            <tr>
+              <th align="left">Date</th>
+              <th align="left">Employee</th>
+              <th align="left">Customer Name</th>
+              <th align="left">Phone</th>
+              <th align="left">Item Name</th>
+              <th align="left">Base Price</th>
+              <th align="left">Selling Price</th>
+              <th align="left">Quantity</th>
+              <th align="left">Total Revenue</th>
+              <th align="left">Profit</th>
+            </tr>
+          </thead>
+          <tbody id="salesTableBody">
+            <tr>
+              <td colspan="10" style="text-align: center; padding: 20px; color: #6b7280;">No sales recorded yet</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+  </div>
+
+<script src="../js/sales-history.js"></script>
+
+</body>
+</html>
